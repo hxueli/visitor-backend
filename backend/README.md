@@ -4,6 +4,7 @@
 # 修改src/utils/request.js 中baseURL
 # 启动node server
 cd server
+# 修改代码配置
 npm install express mysql body-parser
 nodemon index.js
 
