@@ -2,6 +2,11 @@
 # 修改config/index.js  中proxyTable、host
 
 # 修改src/utils/request.js 中baseURL
+# 启动node server
+cd server
+npm install express mysql body-parser
+nodemon index.js
+
 ```
 ### 参考
 # vueAdmin-template
