@@ -1,7 +1,8 @@
-#修改config/index.js  中proxyTable、host
-#修改src/utils/request.js 中baseURL
+# 修改config/index.js  中proxyTable、host
 
-参考
+# 修改src/utils/request.js 中baseURL
+
+# 参考
 # vueAdmin-template
 
 > A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
