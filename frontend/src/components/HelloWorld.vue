@@ -28,7 +28,7 @@
       </select>
     </div>
     <div class="submit">
-      <a class="list-tx" href="javascript:;" @click="addUser">提交</a>
+      <a class="list-tx" href="https://www.insta360.com/about?inspm=77c1c2.6666cd.0.0" @click="addUser">提交</a>
     </div>
   </div>
 </template>
