@@ -54,7 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['user/create'] = 'user/create';
+$route['user/view'] = 'user/view';
 $route['user/(:any)'] = 'user/view/$1';
 $route['user'] = 'user';
-$route['(:any)'] = 'user/view/$1';
+//$route['(:any)'] = 'user/view/$1';
 $route['default_controller'] = 'user';
