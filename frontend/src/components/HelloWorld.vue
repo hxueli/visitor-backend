@@ -75,7 +75,7 @@ export default {
               let whatFor = this.ruleForm.whatFor;
 
               const h = this.$createElement;
-              axios.post('/users/addUser.php', {
+              axios.post('/index.php/user/adduser', {
                 userName: userName,
                 phoneNumber: phoneNumber,
                 who: who,

@@ -10,38 +10,18 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$data['user'] = $this->user_model->get_user();
-
 		$this->load->library('table');
-//		$this->load->view('templates/header', $data);
-		$this->load->view('user/index', $data);
-//		$this->load->view('templates/footer');
+		$this->load->view('user/index');
 	}
 
-
-	public function create()
+	public function success()
 	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
+		$this->load->view('user/success');
+	}
 
-
-		$this->form_validation->set_rules('userName', 'userName', 'required');
-		$this->form_validation->set_rules('phoneNumber', 'phoneNumber', 'required');
-		$this->form_validation->set_rules('who', 'who', 'required');
-		$this->form_validation->set_rules('whatCompany', 'whatCompany', 'required');
-		$this->form_validation->set_rules('whatFor', 'whatFor', 'required');
-
-		if ($this->form_validation->run() === FALSE)
-		{
-//			$this->load->view('templates/header', $data);
-			$this->load->view('user/create');
-//			$this->load->view('templates/footer');
-
-		}
-		else
-		{
-			$this->user_model->set_user();
+	public function adduser()
+	{
+			$this->user_model->adduser();
 			$this->load->view('user/success');
-		}
 	}
 }

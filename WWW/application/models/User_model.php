@@ -1,29 +1,29 @@
 <?php
+header("Content-type:text/html;charset=utf-8");
+
 class User_model extends CI_Model {
 
 	public function __construct()
 	{
 		$this->load->database();
 	}
-	public function get_user()
-	{
-//			$query = $this->db->get('user');
-//			return $query->result_array();
 
-	}
-
-	public function set_user()
+	public function adduser()
 	{
 		$this->load->helper('url');
 
-		$data = array(
-			'userName' => $this->input->post('userName'),
-			'phoneNumber' => $this->input->post('phoneNumber'),
-			'who' => $this->input->post('who'),
-			'whatCompany' => $this->input->post('whatCompany'),
-			'whatFor' => $this->input->post('whatFor')
+		$json= file_get_contents('php://input');
+		$data = json_decode($json);
+		//print_r($data->userName);
+
+		$dataarr = array(
+		'userName' => $data->userName,
+		'phoneNumber' => $data->phoneNumber,
+		'who' => $data->who,
+		'whatCompany' => $data->whatCompany,
+		'whatFor' => $data->whatFor
 		);
 
-		return $this->db->insert('user', $data);
+		return $this->db->insert('user', $dataarr);
 	}
 }
